@@ -1,3 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --calc-bg: #0e0f12;
+  --calc-panel: #17191e;
+  --calc-text: #f3f4f6;
+  --calc-subtext: #a5a8b3;
+  --calc-key: #23262e;
+  --calc-key-alt: #2c303a;
+  --calc-operator: #ff9f0a;
+  --calc-operator-active: #ffd8a3;
+  --calc-accent: #00e0c7;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +25,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--calc-bg);
+  color: var(--calc-text);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Visible focus for accessibility */
+:focus-visible {
+  outline: none;
 }
